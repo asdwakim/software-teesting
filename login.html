@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>login</title>
+    
+</head>  
+<style>
+
+    *
+    {
+        margin: 5px;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        
+    }
+
+    body
+    {
+        position: flex;
+        min-height: 100vh; /* ค.สูงขั้นตํ่า  vh คือ ความสูงของ viewport ก็คือ ขนาดการแสดงผลของหน้าจอ */
+        background-color: #23242a;   
+        
+    }
+
+    .box
+    {
+        position: relative;
+        width: 380px;
+        height: 420px;
+        background-color: red; /* สีขอบ infinite */
+        margin: auto;
+        margin-top: 30%;
+        overflow: hidden; 
+        
+    }
+
+    .form
+    {
+        position: absolute;
+        inset: 2px; /* ขนาดขอบ สี infinite */
+        background: #28292d;
+        z-index: 10;
+        border-radius: 8px;
+        padding: 60px 60px;
+        display: flex;
+        flex-direction: column;
+
+        
+    }
+    
+
+    h2 
+    {
+        color: #45f3ff;
+        text-align: center;
+        letter-spacing: 0.1em;
+        
+    }
+
+    
+
+    .inputbox
+    {
+        position: relative;
+        width: 300px;
+        margin-top: 35px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        background-color: rebeccapurple;
+    }
+
+    .inputbox input 
+    {
+        /* ข้อความที่กรอกในช่อง  username password */
+
+        position: relative;
+        width: 100%;
+        padding: 20px 10px 10px ; /* ระยะห่าง ข้อตวาม กับ ขอบ */
+        background: transparent;
+        font-size: medium;
+        border: none; /*ค่าขอบ */
+        letter-spacing: 0.05em;
+        color: black; /* สีตัวอักษรที่ กรอก */
+        z-index: 10;
+    }
+
+    .inputbox span
+    {
+        /* ข้อความ username password */
+        position: absolute;
+        left: 0;
+        padding: 10px 10px;
+        pointer-events: none;
+        letter-spacing: 0.5em;
+        color: gray;
+    }
+
+    .inputbox input:valid ~ span,
+    .inputbox input:focus ~ span
+    {
+        color: #45f3ff;
+        transform: translateX(-10px) translateY(-90px); /*ย้าย username pass เมื่อ คลิ๊กช่องว่าง */
+        font-size: o.75em;
+    }
+
+    .inputbox i
+    {
+        /* ช่อง username password */
+        
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 95%;
+        height: 2px;
+        background: #45f3ff;
+        transition: 0.5s;
+        pointer-events: none;
+        
+
+    }
+
+    .inputbox input:valid ~ i,
+    .inputbox input:focus ~ i
+    {
+        height: 60px;
+        
+    }
+
+
+
+
+    input[type="submit"]
+    {
+        border: none;
+        outline: none;
+        background: #45f3ff;
+        padding:  11px 25px;
+    }
+
+</style> 
+
+<body>
+    <div class="box">
+        <div class="form">
+            <h2>Sign in</h2>
+            <div class="inputbox">
+                <input type="text" required="required">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <input type="password" required="required">
+                <span>Password</span>
+                <i></i>    
+            </div>
+            <br>
+            <br>
+            <input type="submit" value="Login">
+        </div>
+            
+    </div>
+    
+</body>
+</html>

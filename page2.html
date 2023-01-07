@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASD Wakim</title>
+    
+</head>
+<style>
+    body{
+        background-color: black;padding: 1px;
+        background-image: url(2.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+    }
+    h1{
+        color: red;
+        text-align: center;
+    }
+    p{
+        color: black;
+    }
+    a{
+        color: black;
+    }
+
+    .icon-bar {
+        width: 100%;
+        background-color: #555;
+        overflow: auto;
+    }
+
+    .icon-bar a {
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 15px 0;
+        transition: all 0.3s ease;
+        color: rgb(27, 3, 3);
+        font-size: 20px;
+    }
+
+    table {
+        background-color: aqua;
+        color: firebrick;
+        border: 30px;
+        margin: 20px;
+    
+    }
+
+    table, th, td {
+        border: 5px solid gray;
+    }
+    
+    .icon-bar a:hover {
+        background-color: red;
+    }
+
+    .active {
+        background-color: aliceblue;
+    }
+
+    table, th, td {
+        border: 5px solid gray;
+    }
+
+    .tab {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .tab a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: blue;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .tab {
+        color: green;
+    }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+        color: aliceblue;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: black;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: green;
+        display: block;
+        transition: 0.3s;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+    }
+    #main {
+        color: black;
+        transition: margin-left .2s;
+        padding: 16px;
+    }
+    .sidenav a:hover {
+        color: red;
+    } 
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+
+    
+
+</style>
+<body>
+
+    <h1>Hello World</h1>
+
+    <div class="icon-bar">
+        <a class="active" href="Home.html">Home</a>
+        <a href="page1.html">page1</a>
+        <a href="page2.html">page2</a> 
+        <a href="#">page3</a>
+        <a href="#">page4</a>
+    </div>
+
+    <div id="tabLeft" class="tab">
+        <a href="" class="closebtn"
+    onclick="closeNav()">&times;</a>
+        <a href="image.jpg">picture</a>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a herf="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Clients</a>
+        <a href="">Contact</a>
+    </div>
+
+<script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+</script>
+
+       
+
+    
+    <p>
+       <li><Button type="button" ><a href="https://www.w3schools.com" target="_blank">w3schools</a></Button></li>
+       <li><Button type="button" ><a href="https://www.google.co.th" target="_blank">google</a> </Button></li>
+       <li><Button type="button" ><a href="https://www.youtube.com" target="_blank">youtube</a> </Button></li>
+       <li><Button type="button" ><a href="page1.html">page2</a> </Button></li>
+    </p>
+
+
+
+
+
+</body>
+</html>
+
+
